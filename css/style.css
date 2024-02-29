@@ -533,59 +533,31 @@ section .theme3 .teams {
 
 section .theme3 .teams ul {
   overflow: hidden;
+  padding: 10px 0;
+}
+
+@media (max-width: 960px) {
+  section .theme3 .teams ul {
+    padding: 0;
+  }
 }
 
 section .theme3 .teams ul li {
-  overflow: hidden;
-  padding: 10px 0;
-  border-bottom: 1px solid #C9A063;
-}
-
-@media (min-width: 960px) {
-  section .theme3 .teams ul li {
-    width: calc((100% - 50px) / 5);
-    margin-right: 10px;
-    float: left;
-  }
-}
-
-section .theme3 .teams ul li:first-child {
-  padding-top: 0;
-}
-
-section .theme3 .teams ul li:last-child {
-  padding-bottom: 0;
-}
-
-section .theme3 .teams ul li:nth-child(odd) {
-  position: relative;
-}
-
-section .theme3 .teams ul li:nth-child(odd) .photo {
-  width: 46%;
+  width: 20%;
   float: left;
+  padding: 10px;
+  border-bottom: 1px solid #C9A063;
+  overflow: hidden;
 }
 
-@media (min-width: 960px) {
-  section .theme3 .teams ul li:nth-child(odd) .photo {
-    width: 90%;
+@media (max-width: 960px) {
+  section .theme3 .teams ul li {
+    width: 100%;
+    padding: 10px 0;
   }
 }
 
-section .theme3 .teams ul li:nth-child(odd) .intro {
-  width: 45%;
-  float: right;
-  margin-left: 5%;
-}
-
-@media (min-width: 960px) {
-  section .theme3 .teams ul li:nth-child(odd) .intro {
-    width: 90%;
-    margin-top: 20px;
-  }
-}
-
-section .theme3 .teams ul li:nth-child(odd):after {
+section .theme3 .teams ul li:after {
   content: "";
   width: 1px;
   height: calc(100% - 20px);
@@ -595,49 +567,73 @@ section .theme3 .teams ul li:nth-child(odd):after {
   top: 10px;
 }
 
+section .theme3 .teams ul li:nth-child(odd) {
+  position: relative;
+}
+
+section .theme3 .teams ul li:nth-child(odd) .photo {
+  width: 100%;
+}
+
+@media (max-width: 960px) {
+  section .theme3 .teams ul li:nth-child(odd) .photo {
+    width: 50%;
+    float: left;
+  }
+}
+
+section .theme3 .teams ul li:nth-child(odd) .intro {
+  width: 100%;
+  padding: 10px 0;
+}
+
+@media (max-width: 960px) {
+  section .theme3 .teams ul li:nth-child(odd) .intro {
+    width: 45%;
+    float: right;
+    margin-left: 5%;
+    padding: 0;
+  }
+}
+
 section .theme3 .teams ul li:nth-child(even) {
   position: relative;
 }
 
 section .theme3 .teams ul li:nth-child(even) .photo {
-  width: 50%;
-  float: right;
+  width: 100%;
 }
 
-@media (min-width: 960px) {
+@media (max-width: 960px) {
   section .theme3 .teams ul li:nth-child(even) .photo {
-    width: 90%;
+    width: 50%;
+    float: right;
   }
 }
 
 section .theme3 .teams ul li:nth-child(even) .intro {
-  width: 40%;
-  float: left;
-  margin-left: 10%;
+  width: 100%;
+  padding: 10px 0;
 }
 
-@media (min-width: 960px) {
+@media (max-width: 960px) {
   section .theme3 .teams ul li:nth-child(even) .intro {
-    width: 90%;
-    margin-top: 20px;
+    width: 45%;
+    float: left;
+    margin-right: 5%;
+    padding: 0;
   }
 }
 
-section .theme3 .teams ul li:nth-child(even):after {
-  content: "";
-  width: 1px;
-  height: calc(100% - 20px);
-  background: #C9A063;
-  position: absolute;
-  left: 0;
-  top: 10px;
-}
-
-@media (min-width: 960px) {
+@media (max-width: 960px) {
   section .theme3 .teams ul li:nth-child(even):after {
-    left: auto;
-    right: 0;
+    right: auto;
+    left: 0;
   }
+}
+
+section .theme3 .teams ul li:last-child:after {
+  display: none;
 }
 
 section .theme4 .title {

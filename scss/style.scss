@@ -408,7 +408,6 @@ section{
         }
         .teams{
             width: calc(340/460*100%);
-            // max-width: 350px;
             margin: 3% auto;
             padding: 20px;
             background: #fff;
@@ -418,81 +417,84 @@ section{
             }
             ul{
                 overflow: hidden;
+                padding: 10px 0;
+                @media (max-width:960px) {
+                    padding: 0;
+                }
                 li{
-                    overflow: hidden;
-                    padding: 10px 0;
+                    width: 20%;
+                    float: left;
+                    padding: 10px;
                     border-bottom: 1px solid #C9A063;
-                    @media (min-width:960px) {
-                        width: calc((100% - 50px) / 5;
-                        margin-right: 10px;
-                        float: left;
+                    // border-right: 1px solid #C9A063;
+                    overflow: hidden;
+                    @media (max-width:960px) {
+                        width: 100%;
+                        padding: 10px 0;
                     }
 
-                    &:first-child{
-                        padding-top: 0;
+
+                    &:after{
+                        content: "";
+                        width: 1px;
+                        height: calc(100% - 20px);
+                        background: #C9A063;
+                        position: absolute;
+                        right: 0;
+                        top: 10px;
                     }
-                    &:last-child{
-                        padding-bottom: 0;
-                    }
+
                     &:nth-child(odd){
                         position: relative;
                         .photo{
-                            width: 46%;
-                            float: left;
-                            @media (min-width:960px) {
-                                width: 90%;
+                            width: 100%;
+                            @media (max-width:960px) {
+                                width: 50%;
+                                float: left;
                             }
                         }
                         .intro{
-                            width: 45%;
-                            float: right;
-                            margin-left: 5%;
-                            @media (min-width:960px) {
-                                width: 90%;
-                                margin-top: 20px;
+                            width: 100%;
+                            padding: 10px 0;
+                            @media (max-width:960px) {
+                                width: 45%;
+                                float: right;
+                                margin-left: 5%;
+                                padding: 0;
                             }
-                        }
-                        &:after{
-                            content: "";
-                            width: 1px;
-                            height: calc(100% - 20px);
-                            background: #C9A063;
-                            position: absolute;
-                            right: 0;
-                            top: 10px;
                         }
                     }
+
                     &:nth-child(even){
                         position: relative;
-
                         .photo{
-                            width: 50%;
-                            float: right;
-                            @media (min-width:960px) {
-                                width: 90%;
+                            width: 100%;
+                            @media (max-width:960px) {
+                                width: 50%;
+                                float: right;
                             }
                         }
                         .intro{
-                            width: 40%;
-                            float: left;
-                            margin-left: 10%;
-                            @media (min-width:960px) {
-                                width: 90%;
-                                margin-top: 20px;
+                            width: 100%;
+                            padding: 10px 0;
+                            @media (max-width:960px) {
+                                width: 45%;
+                                float: left;
+                                margin-right: 5%;
+                                padding: 0;
                             }
                         }
                         &:after{
-                            content: "";
-                            width: 1px;
-                            height: calc(100% - 20px);
-                            background: #C9A063;
-                            position: absolute;
-                            left: 0;
-                            top: 10px;
-                            @media (min-width:960px) {
-                                left: auto;
-                                right: 0;
+                            @media (max-width:960px) {
+                                right: auto;
+                                left: 0;
                             }
+                        }
+                    }
+
+                    &:last-child{
+                        &:after{
+                            display: none;
                         }
                     }
                 }
