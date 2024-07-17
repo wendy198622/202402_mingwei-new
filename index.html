@@ -362,7 +362,7 @@
                                 <div class="item">
                                     <input type="text" v-model="phone" name="phone" placeholder="手機" />
                                 </div>
-                                <div class="item select">
+                                <!-- <div class="item select">
                                     <select v-model="type" name="type1">
                                         <option disabled selected value="">需求房型</option>
                                         <option>2房</option>
@@ -371,7 +371,7 @@
                                         <option>3房</option>
                                         <option>3+1房</option>
                                     </select>
-                                </div>
+                                </div> -->
                                 <div class="item">
                                     <input type="text" v-model="county" name="county" placeholder="居住城市" />
                                 </div>
@@ -395,19 +395,17 @@
                     </div>
             </div>
 
-    </div>
-
-    </section>
+        </section>
     
-    <section class="popup" v-bind:class="{ is_acted: popupIndex != 0 }">
+        <section class="popup" v-bind:class="{ is_acted: popupIndex != 0 }">
 
-        <div class="formGroup popup_message">
+            <div class="formGroup popup_message">
 
-            {{msg}}
+                {{msg}}
 
-        </div>
+            </div>
 
-    </section>
+        </section>
 
     </div>
 
@@ -507,11 +505,11 @@
 
                 var self = this;
 
-                var tomail = "wendy198622@gmail.com" //信箱
+                var tomail = "sxccvl238561@gmail.com" //信箱
                 var to_name = "新理想建設" //信件名稱
                 var subject = "我要預約明瑋霞觀看房" //信件主旨
                 var content = "姓名:" + self.name + "\n" +
-                    "需求房型:" + self.type + "\n" +
+                    // "需求房型:" + self.type + "\n" +
                     "電話:" + self.phone + "\n" +
                     "區域:" + self.county + "-" + self.district + "\n" +
                     "個人資料集聲明事項:" + (self.check ? "同意" : "不同意") + "\n" +
