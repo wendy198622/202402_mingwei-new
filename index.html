@@ -46,7 +46,7 @@
     <div id="app">
         <div class="fixed_area">
             <ul>
-                <li><a href="https://lin.ee/1LJcsRG">預約賞屋</a></li>
+                <li><a href="#reservation">預約賞屋</a></li>
                 <li><a href="tel:03-3321999">撥打電話</a></li>
                 <li><a href="https://maps.app.goo.gl/YaxQMZzUhxJKUPGx7" target="_blank">地圖導航</a></li>
                 <li><a href="http://line.naver.jp/R/msg/text/http://kasumigaseki.tw/#01" target="_blank">分享好友</a></li>
@@ -350,7 +350,7 @@
                         alt="">
                 </div>
             </div>
-            <div class="section theme theme15">
+            <div class="section theme theme15" id="reservation">
                     <div class="infotitle" class="wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.3s">
                         預約賞屋</div>
                     <div class="container">
@@ -505,15 +505,16 @@
 
                 var self = this;
 
-                var tomail = "sxccvl238561@gmail.com" //信箱
+                // var tomail = "sxccvl238561@gmail.com" //信箱
+                var tomail = "wendy198622@gmail.com" //信箱
                 var to_name = "新理想建設" //信件名稱
                 var subject = "我要預約明瑋霞觀看房" //信件主旨
-                var content = "姓名:" + self.name + "\n" +
+                var content = "姓名:" + self.name + "<br>" +
                     // "需求房型:" + self.type + "\n" +
-                    "電話:" + self.phone + "\n" +
-                    "區域:" + self.county + "-" + self.district + "\n" +
-                    "個人資料集聲明事項:" + (self.check ? "同意" : "不同意") + "\n" +
-                    "留言:" + self.message + "\n"
+                    "電話:" + self.phone + "<br>" +
+                    "區域:" + self.county + "-" + self.district + "<br>" +
+                    "個人資料集聲明事項:" + (self.check ? "同意" : "不同意") + "<br>" +
+                    "留言:" + self.message + "<br>"
                 //console.log(content)
 
                 if (!self.check) {
@@ -529,7 +530,7 @@
                 self.popupIndex = 10
 
 
-                fetch('https://gn01658704.lionfree.net/mailV2.php', {
+                fetch('https://yabeesshop.com/forwardMail/mailV2.php', {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
